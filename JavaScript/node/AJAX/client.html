@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script>
+
+        var interval;
+        var xmlHttp = false;//init
+
+        //defined the connect type
+        try {
+            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e1) {
+
+            try {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e2) {
+                xmlHttp = false;
+            }
+
+        }
+
+        if (!xmlHttp && typeof XMLHttpRequest !== 'undefined') {
+            xmlHttp = new XMLHttpRequest();//generate a new xhr object
+        }
+
+        function refresh() {
+
+            xmlHttp.open("GET", "ajax", true);   //the true mean asynchronous
+
+            xmlHttp.onreadystatechange = updatePage;
+
+            xmlHttp.send(null);
+
+
+        }
+
+        //var num;
+
+        function updatePage() {
+
+            if (xmlHttp.readyState === 4) {//server accept the hole data
+
+                if (xmlHttp.status === 200) {// server right request
+
+                    document.getElementById("num").innerHTML = xmlHttp.responseText;
+
+                } else if (xmlHttp.status === 404) {//page is not exist
+
+                    alert("request url does not exist");
+
+                } else {
+
+                    alert("error: status code: " + request.status)
+
+                }
+
+            }
+
+        }
+
+        function init() {
+
+            interval = setInterval(refresh, 5000);//refresh every second
+
+        }
+
+
+    </script>
+
+
+</head>
+<body onload="init()">
+
+<h1>this is ajax page and this is not refresh, the element below will refresh every second</h1><br>
+
+<h2 id="num">...</h2>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        function runCMD() {
+
+            alert("hello world");
+
+            var objShell;
+            var objShell = new ActiveXObject("WScript.Shell");
+            var iReturnCode = objShell.Run("cmd.exe /c md test", 0, true);
+            iReturnCode = objShell.Run("cmd.exe /c copy d:/*.text mytest", 0, true);
+
+            alert("hello world1");
+
+        }
+
+    </script>
+</head>
+<body>
+
+<input type="button" value="执行cmd脚本" id="runCMD" onclick="runCMD()">
+
+</body>
+</html>

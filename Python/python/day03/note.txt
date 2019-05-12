@@ -1,0 +1,22 @@
+.txt
+
+text
+
+.doc
+
+document
+
+.xls
+
+
+.py 
+python file
+
+.java
+java file
+
+.c
+c language file
+
+and this is the type of windows
+

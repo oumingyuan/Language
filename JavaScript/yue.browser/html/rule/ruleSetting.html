@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+
+    <script src="../jquery/jquery-3.2.1.js"></script>
+	<script src="./javascript/rule.js"></script>
+
+
+    <link href="./css/ruleSetting.css" rel="stylesheet" type="text/css"/>
+
+
+</head>
+<body onload="load()">
+
+<h2 align="center">增值服务项目规则 设置</h2>
+
+<form id="ruleInfo" enctype="multipart/form-data">
+
+<table id="table1">
+
+    <caption></caption>
+
+
+    <tr>
+        <td><label for="id">增值服务编号：</label></td>
+        <td>
+        <input type="text" id="id1" disabled>
+        <input type="text" id="id2" name="id" style="display:none">
+        </td>
+        <td id="lala">编号规则自动生成</td>
+    </tr>
+    <tr>
+        <td><label for="name">增值服务名称：</label></td>
+        <td><input type="text" id="name" name="name"></td>
+    </tr>
+    <tr>
+        <td><label for="provider">服务供应商：</label></td>
+        <td><input type="text" id="provider" name="provider"></td>
+    </tr>
+
+    <tr>
+        <td><label for="address">服务地点：</label></td>
+        <td><input type="text" id="address" name="address"></td>
+    </tr>
+    <tr>
+        <td><label for="appoint">服务特别约定：</label></td>
+        <td><input type="text" id="appoint" name="appoint"></td>
+    </tr>
+
+    <tr>
+        <td><label for="begin">生效起日：</label></td>
+        <td><input type="date" id="begin" name="begin"></td>
+    </tr>
+
+    <tr>
+        <td><label for="end">生效止日：</label></td>
+        <td><input type="date" id="end" name="end"></td>
+    </tr>
+    <tr>
+        <td><label for="type">使用记录统计方式：</label></td>
+        <td><select id="type" name="type">
+
+            <option value="系统统计">系统统计</option>
+            <option value="外部记录导入">外部记录导入</option>
+
+        </select></td>
+    </tr>
+
+
+</table>
+
+</form>
+
+<br>
+<br>
+
+<h2 align="center">客群分配次数规则 编辑栏</h2>
+
+<table class="bordered">
+
+
+    <thead>
+
+    <tr>
+        <th ><label>序号</label></th>
+        <th ><label for="customerType">客户类型</label></th>
+        <th><label>初期AUM起始值</label></th>
+        <th><label>初期AUM结束值</label></th>
+        
+        <th ><label>上年收入贡献起始值</label></th>
+        <th ><label>上年收入贡献结束值</label></th>
+ 
+
+        <th ><label>初始分配次数</label></th>
+        <th ><label for="continueSubtractPeriod">持续达标追加次数周期</label></th>
+        <th ><label>持续达标每周期追加次数</label></th>
+        <th ><label for="newSubtractPeriod">新达标追加判断周期</label></th>
+
+        <th ><label for="newSubtractType">新达标次数追加方式</label></th>
+        <th ><label for="oldSubtractPeriod">降级扣减判断周期</label></th>
+        <th ><label for="oldSubtractType">降级次数扣减方式</label></th>
+        <th ><label for="oldSubtractType">操作键</label></th>
+
+    </tr>
+    
+
+    
+
+
+    </thead>
+
+    <tbody>
+    <tr>
+        <td contenteditable="true">客群1</td>
+        <td contenteditable="true">
+            <select id="customerType">
+                <option value="">全部</option>
+                <option value="">私银</option>
+                <option value="">沃德</option>
+                <option value="">交银</option>
+                <option value="">快捷</option>
+                <option value="">普通</option>
+            </select>
+        </td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+
+        <td contenteditable="true"></td>
+        <td contenteditable="true">
+            <select id="continueSubtractPeriod">
+                <option value="">无</option>
+                <option value="">按月</option>
+                <option value="">按季度</option>
+                <option value="">半年度</option>
+            </select>
+        </td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true">
+            <select id="newSubtractPeriod">
+                <option value="">无</option>
+                <option value="">按月</option>
+                <option value="">按季度</option>
+                <option value="">半年度</option>
+            </select>
+        </td>
+
+        <td contenteditable="true">
+            <select id="newSubtractType">
+                <option value="">全额追加初始额度</option>
+                <option value="">按时间进度追加初始额度</option>
+            </select>
+        </td>
+        <td contenteditable="true">
+            <select id="oldSubtractPeriod">
+                <option value="">无</option>
+                <option value="">按月</option>
+                <option value="">按季度</option>
+                <option value="">半年度</option>
+            </select>
+        </td>
+        <td contenteditable="true">
+            <select id="oldSubtractType">
+                <option value="">全额追加初始额度</option>
+                <option value="">按时间进度追加初始额度</option>
+            </select>
+        </td>
+        <td><input type="button" value="新增"></td>
+
+
+    </tr>
+    
+    <tr>
+    <td>客群2</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+    </tr>
+    
+    <tr>
+    <td>客群3</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+    </tr>
+
+
+
+   
+
+    </tbody>
+
+
+</table>
+
+<br>
+
+<table id="table3">
+
+    <tr>
+        <td><input type="button" value="保存" id="save"></td>
+        <td><input type="button" value="取消"></td>
+        <td><input type="button" value="提交"></td>
+
+
+    </tr>
+
+</table>
+
+</body>
+</html>

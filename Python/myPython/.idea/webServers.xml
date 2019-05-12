@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9bf0427f-b4f6-406c-8b86-5a1ba1e24b36" name="fish" url="http://47.94.168.48">
+        <fileTransfer host="47.94.168.48" port="22" rootFolder="/home/oumingyuan" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

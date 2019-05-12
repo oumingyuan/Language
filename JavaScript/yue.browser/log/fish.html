@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular.js/1.6.3/angular.min.js"></script>
+</head>
+<body>
+
+<div class="container" ng-app="myApp" ng-controller="siteCtrl">
+    <h2 class="text-center">日志查询页面</h2>
+    <table class="table">
+
+        <thead>
+        <tr>
+            <th>星期</th>
+            <th>姓名</th>
+            <th>日志状态</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr class="table-success" ng-repeat="x in names">
+            <td>{{ x.approver }}</td>
+            <td>{{ x.status_name }}</td>
+            <td>{{ x.workHour }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('siteCtrl', function ($scope, $http) {
+        $http.post("http://localhost:8080/VASP/refresh/queryLog")
+            .then(function (response) {
+                $scope.names = response.data;
+            });
+    });
+</script>
+
+</body>
+</html>

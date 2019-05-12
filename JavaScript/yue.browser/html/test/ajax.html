@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../jquery/jquery-3.2.1.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+
+            $("#send1").click(post)
+
+        });
+
+
+        function post() {
+
+            $.ajax({
+
+
+                url:'http://localhost:8080/VASP/demo/test2',
+                type:"post",
+                dataType:"json",
+
+                data: {
+
+                },
+
+                success:function (t) {
+
+                    alert("success");
+
+
+                    alert(JSON.stringify(t))
+
+
+                },
+
+                error:function (t) {
+
+                    alert("error");
+
+                    alert(JSON.stringify(t))
+
+                }
+
+            });
+
+
+        }
+
+    </script>
+</head>
+<body>
+
+<input type="button" id="send1" value="send post">
+
+</body>
+</html>

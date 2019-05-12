@@ -1,0 +1,16 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns2:PayPasswdCheckResponse xmlns="www.northking.com/metadata" xmlns:ns2="www.northking.com/service/UserInfoServer">
+         <ns2:SHEAD>
+            <channelSerialNo>1</channelSerialNo>
+            <sysSerialNo>4</sysSerialNo>
+            <responesId>5</responesId>
+            <retType>3</retType>
+         </ns2:SHEAD>
+         <ns2:SBODY>
+            <status>000000</status>
+            <message>OK</message>
+         </ns2:SBODY>
+      </ns2:PayPasswdCheckResponse>
+   </soap:Body>
+</soap:Envelope>

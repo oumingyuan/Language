@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script>
+
+        function add() {
+
+
+            // const a = parseInt(document.getElementById("a").value);
+            // const b = parseInt(document.getElementById("b").value);
+            //
+            //
+            // document.getElementById("c").value = a + b;
+            alert("hello");
+
+            //Create the database
+
+            const db = new window.SQL.Database();
+
+
+            db.run("CREATE TABLE test (列1 int, 列2 char);");
+
+            db.run("INSERT INTO test VALUES (0,'hello');");
+
+            db.run("INSERT INTO test VALUES (1,'world');");
+
+            db.run("INSERT INTO test VALUES (55,'34534545');");
+
+            db.run("INSERT INTO test VALUES (166,'woteggrgrld');");
+
+            //save to local file
+
+            var data = db.export();
+
+            var arraybuff = data.buffer;
+
+            var blob = new Blob([arraybuff]);
+
+            var url = window.URL.createObjectURL(blob);
+
+
+
+            var a = document.createElement("a");
+
+            a.href = url;
+
+            a.download = 'test.db';
+
+            a.click();
+
+            window.URL.revokeObjectURL(url);
+
+
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+<h1>计算1+1等于几</h1>
+
+<br>
+
+<input type="text" id="a"> + <input type="text" id="b"><br><br>
+
+<input type="button" value="等于" onclick="add()"><br><br>
+
+<input type="text" id="c">
+
+</body>
+</html>

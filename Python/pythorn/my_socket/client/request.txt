@@ -1,0 +1,22 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:user="www.northking.com/service/UserInfoServer" xmlns:met="www.northking.com/metadata">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <user:PayPasswdCheck>
+         <user:SHEAD>
+            <met:headVersion>1.0</met:headVersion>
+            <met:version>1.0</met:version>
+            <met:channelSerialNo>1983249874298</met:channelSerialNo>
+            <met:sysSerialNo>24345984389</met:sysSerialNo>
+            <met:requestId>4329982349843</met:requestId>
+            <!--Optional:-->
+            <met:targetId>2243522</met:targetId>
+            <met:requestTime>20150512000000</met:requestTime>
+            <met:channelId>455543355</met:channelId>
+         </user:SHEAD>
+         <user:SBODY>
+            <met:userId>982544525987</met:userId>
+            <met:payPassword>123456</met:payPassword>
+         </user:SBODY>
+      </user:PayPasswdCheck>
+   </soapenv:Body>
+</soapenv:Envelope>

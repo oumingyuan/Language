@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<script>
+
+    var  socket;
+
+    function connect() {
+
+        alert("lala");
+
+        socket=new WebSocket('ws://192.168.100.104:8888');
+
+
+        socket.onopen=function (event) {
+
+            socket.send("lala");
+
+
+        };
+
+        socket.onmessage=function (event) {
+
+            alert(event)
+
+        }
+
+    }
+
+
+
+</script>
+
+
+
+<body>
+
+<textarea id="msg"></textarea><br>
+
+<button id="connect" onclick="connect()">connect</button>
+
+<button id="send" onclick="send()">send</button>
+
+
+</body>
+</html>

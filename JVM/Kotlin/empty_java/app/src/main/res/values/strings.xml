@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">empty_java</string>
+    <string name="hello_world">Hello World!你好，世界，这个是主页面</string>
+    <string name="hello">hello</string>
+    <string name="button">Button</string>
+    <string name="field">字段</string>
+    <string name="value_table">数值</string>
+    <string name="probability_table">概率</string>
+</resources>
